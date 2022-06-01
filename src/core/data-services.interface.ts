@@ -1,7 +1,7 @@
-import { IGenericRepository } from './generic-repository.abstract';
-import { AuthorEntity, BlogEntity } from './entities';
+import { IGenericRepository } from './generic-repository.interface';
+import { Author, Blog } from './entities';
 
-export interface IDataServices {
-    authors: IGenericRepository<AuthorEntity>;
-    blogs: IGenericRepository<BlogEntity>;
+export abstract class IDataServices {
+    authors: IGenericRepository<Author>;
+    // blogs: IGenericRepository<Blog>;
 }
