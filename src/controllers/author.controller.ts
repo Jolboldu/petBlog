@@ -9,7 +9,7 @@ export class AuthorController {
   @Get()
   async getAll() {
     return 'hello bob clean architect'
-    return this.authorUseCases.getAllAuthors();
+    // return this.authorUseCases.getAllAuthors();
   }
 
   @Get(':id')

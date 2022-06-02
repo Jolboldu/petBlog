@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { IGenericRepository } from '../../core/generic-repository.interface';
+import { IGenericRepository } from '../core/generic-repository.interface';
 
 @Injectable()
 export class TypeormGenericRepository<T> implements IGenericRepository<T>{

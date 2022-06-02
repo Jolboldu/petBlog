@@ -1,7 +1,7 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Module } from '@nestjs/common';
 import { dirname } from 'path';
-
+import { AuthorEntity } from '../frameworks/entities'
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -17,7 +17,8 @@ import { dirname } from 'path';
         dropSchema: false,
         synchronize: true,
         migrationsRun: true,
-        entities: [dirname(__dirname) + '/**/*.entity.{ts,js}'],
+        // entities: [dirname(__dirname) + '/**/*.entity.{ts,js}'],
+        entities: [AuthorEntity],
         migrations: [__dirname + '/migrations/*.{ts,js}'],
     }),
   ],

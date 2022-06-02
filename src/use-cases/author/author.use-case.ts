@@ -12,12 +12,12 @@ export class AuthorUseCase{
         return this.dataServices.authors.getAll();
       }
     
-      getAuthorById(id: any): Promise<Author> {
-        return this.dataServices.authors.get(id);
-      }
-    
-      createAuthor(data: CreateAuthorDto): Promise<Author> {
-        const author = new Author(data.firstName, data.lastName, data.email, data.pseudonym);
-        return this.dataServices.authors.create(author);
-      }
+    getAuthorById(id: any): Promise<Author> {
+      return this.dataServices.authors.get(id);
+    }
+  
+    createAuthor(data: CreateAuthorDto): Promise<Author> {
+      const author = new Author(data.firstName, data.lastName, data.email, data.pseudonym);
+      return this.dataServices.authors.create(author);
+    }
     }

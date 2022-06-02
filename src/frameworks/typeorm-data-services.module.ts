@@ -1,10 +1,10 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Module } from '@nestjs/common';
-import { IDataServices } from '../../core/data-services.interface';
+import { IDataServices } from '../core/data-services.interface';
 import {
   AuthorEntity
 } from './entities';
-import { TypeormDataService } from './typeorm-data-service';
+import { TypeormDataService } from './typeorm-data-services.service';
 
 @Module({
   imports: [

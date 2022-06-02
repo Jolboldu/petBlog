@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { TypeormDataService } from '../frameworks/database-repositories/typeorm-data-service';
+import { TypeormDataService } from '../frameworks/typeorm-data-services.service';
 
 @Module({
   imports: [TypeormDataService],
