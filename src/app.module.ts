@@ -5,14 +5,8 @@ import { DataServicesModule } from './data-services';
 import { DatabaseModule } from './database';
 
 @Module({
-  imports: [
-    DatabaseModule,
-    DataServicesModule,
-    AuthorUseCasesModule,
-  ],
-  controllers: [
-    AuthorController,
-  ],
+  imports: [DatabaseModule, DataServicesModule, AuthorUseCasesModule],
+  controllers: [AuthorController],
   providers: [],
 })
 export class AppModule {}

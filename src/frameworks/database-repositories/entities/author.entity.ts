@@ -17,5 +17,4 @@ export class AuthorEntity extends BaseEntity {
 
   @Column('varchar', { unique: true })
   pseudonym: string;
-
 }

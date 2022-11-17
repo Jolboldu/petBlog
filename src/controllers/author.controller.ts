@@ -8,7 +8,7 @@ export class AuthorController {
 
   @Get()
   async getAll() {
-    return 'hello bob clean architect'
+    // return 'hello bob clean architect'
     return this.authorUseCases.getAllAuthors();
   }
 
@@ -21,5 +21,4 @@ export class AuthorController {
   createAuthor(@Body() authorDto: CreateAuthorDto) {
     return this.authorUseCases.createAuthor(authorDto);
   }
-
 }

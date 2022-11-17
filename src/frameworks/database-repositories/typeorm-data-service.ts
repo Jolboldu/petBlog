@@ -6,15 +6,18 @@ import { AuthorEntity } from './entities';
 import { TypeormGenericRepository } from './typeorm-generic.repository';
 
 @Injectable()
-export class TypeormDataService implements IDataServices, OnApplicationBootstrap{
-    authors: TypeormGenericRepository<AuthorEntity>;
-    constructor(
-        @InjectRepository(AuthorEntity)
-        private readonly authorEntityRepository: Repository<AuthorEntity>,
-    ){}
+export class TypeormDataService
+  implements IDataServices, OnApplicationBootstrap
+{
+  authors: TypeormGenericRepository<AuthorEntity>;
+  constructor(
+    @InjectRepository(AuthorEntity)
+    private readonly authorEntityRepository: Repository<AuthorEntity>,
+  ) {}
 
-    onApplicationBootstrap() {
-        this.authors = new TypeormGenericRepository<AuthorEntity>(this.authorEntityRepository);
-      }
-    
+  onApplicationBootstrap() {
+    this.authors = new TypeormGenericRepository<AuthorEntity>(
+      this.authorEntityRepository,
+    );
+  }
 }
